@@ -1,4 +1,5 @@
 import { Client, Collection, Interaction } from "discord.js";
+import { EXTANDED_CLIENT } from "../../index.js";
 import { Evenement } from "../structures/evenements.js";
 
 export default new Evenement(
@@ -10,6 +11,12 @@ export default new Evenement(
          * @param { { commands: Collection, events: Collection } & Client } client
         */
 
-        async callback (client, interaction) { return console.log(`\n\x1b[36mEvent \x1b[37m➥  \x1b[32mClient is now ready !\n\x1b[0m`); }
+        async callback (client, interaction) { 
+            EXTANDED_CLIENT.commands.map(commandOptions => 
+                {
+                    EXTANDED_CLIENT.guilds.cache.map(async (guild) => { guild.commands.create(commandOptions)});
+                }
+            );
+        }
     }
 )
