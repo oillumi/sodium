@@ -14,12 +14,11 @@ export class Command {
      * Esta class manejará todos los comandos del cliente, con parámetros 
      * como los permisos del usuario, la categoría del comando, los datos del comando y el ejecutable (callback)
      * 
-     * @param { { userPermssions: import("discord.js").PermissionResolvable, callback: Function, commandCategory: 'CHAT' | 'MODERATION' | 'PROTECTION' } & import("discord.js").ChatInputApplicationCommandData} commandOptions
+     * @param { { ?userPermssions: import("discord.js").PermissionResolvable, callback: Function, commandCategory: 'CHAT' | 'MODERATION' | 'PROTECTION' } & import("discord.js").ChatInputApplicationCommandData} commandOptions
     */
 
     constructor(commandOptions = { userPermssions, commandCategory, callback } )
     {
-        EXTANDED_CLIENT.guilds.cache.map(async (guild) => guild.commands.create(commandOptions));
         EXTANDED_CLIENT.commands.set(commandOptions.name, commandOptions);
     }
 }
