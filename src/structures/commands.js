@@ -1,4 +1,4 @@
-import { EXTANDED_CLIENT } from "../../index.js";
+import { EXTENDED_CLIENT } from "../../index.js";
 
 export class Command {
     
@@ -19,6 +19,6 @@ export class Command {
 
     constructor(commandOptions = { userPermssions, commandCategory, callback } )
     {
-        EXTANDED_CLIENT.commands.set(commandOptions.name, commandOptions);
+        EXTENDED_CLIENT.commands.set(commandOptions.name, commandOptions);
     }
 }
