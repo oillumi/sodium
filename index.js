@@ -1,6 +1,6 @@
-import { ExtandedClient } from "./src/structures/client.js";
+import { ExtendedClient } from "./src/structures/client.js";
 
-export const EXTANDED_CLIENT = new ExtandedClient(
+export const EXTENDED_CLIENT = new ExtendedClient(
     {
         eventDir: '../events/',
         commandDir: '../commands/',
