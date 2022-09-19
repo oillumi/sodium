@@ -1,4 +1,4 @@
-import { EXTANDED_CLIENT } from "../../index.js";
+import { EXTENDED_CLIENT } from "../../index.js";
 
 export class Evenement {
 
@@ -16,7 +16,7 @@ export class Evenement {
     */
 
     constructor(evenementOptions = { eventName, callback }) {
-        EXTANDED_CLIENT.events.set(Object.keys(evenementOptions.eventName)[0], evenementOptions);
-        EXTANDED_CLIENT.on(Object.keys(evenementOptions.eventName)[0], async (...args) => evenementOptions.callback(EXTANDED_CLIENT, ...args));
+        EXTENDED_CLIENT.events.set(Object.keys(evenementOptions.eventName)[0], evenementOptions);
+        EXTENDED_CLIENT.on(Object.keys(evenementOptions.eventName)[0], async (...args) => evenementOptions.callback(EXTENDED_CLIENT, ...args));
     }
 }
