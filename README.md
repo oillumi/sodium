@@ -14,9 +14,9 @@ Sodium es una plantilla de cliente avanzada de código abierto para la versión 
 
 ### How to use it
 ```js
-import { ExtandedClient } from "./src/structures/client.js";
+import { ExtendedClient } from "./src/structures/client.js";
 
-export const EXTANDED_CLIENT = new ExtandedClient(
+export const EXTENDED_CLIENT = new ExtendedClient(
     {
         eventDir: '../events/', // Events file
         commandDir: '../commands/', // Command file
