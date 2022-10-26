@@ -1,5 +1,5 @@
 {
-  "name": "advanced-discord-client-13.6.0",
+  "name": "sodium-discord-13.6.0",
   "version": "1.0.0",
   "description": "An advanced discord client for 13.6.0",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "keywords": [
     "Discord"
   ],
-  "author": "Illum1ii",
+  "author": "illumi",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.6.0"
